@@ -15,6 +15,10 @@ export class ProductService {
   create(product: Product): Observable<Product> { 
     return this.http.post<Product>(this.baseUrl, product)
   }
+
+  read(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl)
+  }
   
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'Close', {
