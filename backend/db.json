@@ -1,14 +1,14 @@
 {
-    "products": [
-        {
-            "id": "1",
-            "name": "Iphone X",
-            "price": 5200
-        },
-        {
-            "id": "2",
-            "name": "Iphone SE",
-            "price": 3100
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone X",
+      "price": 5200
+    },
+    {
+      "id": 2,
+      "name": "Iphone SE",
+      "price": 3100
+    }
+  ]
 }
