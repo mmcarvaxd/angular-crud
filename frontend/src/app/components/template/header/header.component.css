@@ -8,3 +8,14 @@
     align-items: center;
     text-decoration: none;
 }
+
+.header .logo {
+    max-width: 90px;
+}
+
+.header .title-group {
+    padding-left: 25px;
+}
+.header .title-group i {
+    padding-right: 15px;
+}
