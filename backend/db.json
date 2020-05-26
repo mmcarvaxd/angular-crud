@@ -29,6 +29,11 @@
       "name": "Ipad Pro",
       "price": "7000",
       "id": 6
+    },
+    {
+      "name": "Macbook air",
+      "price": "6000",
+      "id": 7
     }
   ]
 }

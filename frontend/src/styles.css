@@ -19,6 +19,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: #d63031;
 }
 
+.msg-success {
+  background-color: #00b894;
+  color: white;
+}
+
+.msg-error {
+  background-color: #ff7675;
+  color: white;
+}
+
+.msg-error .mat-button-wrapper {
+  color: #dfe6e9;
+}
+
+.msg-success .mat-button-wrapper {
+  color: #dfe6e9;
+}
+
 body {
     font-family: Roboto, sans-serif;
   }
@@ -64,3 +82,5 @@ body {
   .material-icons.material-icons--sharp {
     font-family: 'Material Icons Sharp';
   }
+
+ 
