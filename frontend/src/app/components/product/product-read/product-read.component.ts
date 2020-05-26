@@ -35,7 +35,7 @@ export class ProductReadComponent implements AfterViewInit, OnInit {
   }
 
   insertDataTable(products: Product[]) {
-    this.dataSource.data = this.products
+    this.dataSource.data = products
     this.paginator._changePageSize(this.paginator.pageSize)
     this.table.renderRows()
   }
