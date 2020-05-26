@@ -11,12 +11,13 @@ import { Product } from '../product.model';
  * (including sorting, pagination, and filtering).
  */
 export class ProductReadDataSource extends DataSource<Product> {
-  data: Product[];
+  data: Product[] = [];
   paginator: MatPaginator;
   sort: MatSort;
 
-  constructor() {
+  constructor(products: Product[]) {
     super();
+    this.data = products
   }
 
 
@@ -44,6 +45,10 @@ export class ProductReadDataSource extends DataSource<Product> {
    * any open connections or free any held resources that were set up during connect.
    */
   disconnect() { }
+
+  changeData(products: Product[]) {
+    this.data = products
+  }
 
   /**
    * Paginate the data (client-side). If you're using server-side pagination,

@@ -11,18 +11,17 @@ import { ProductReadDataSource } from './product-read-datasource';
   styleUrls: ['./product-read.component.css']
 })
 export class ProductReadComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<Product>;
-  dataSource: ProductReadDataSource;
-  products: Product[]
+  @ViewChild(MatTable, {static: false}) table: MatTable<Product>;
+  products: Product[] = []
+  dataSource: ProductReadDataSource = new ProductReadDataSource(this.products)
 
   displayedColumns = ['id', 'name', 'price', 'action'];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.dataSource = new ProductReadDataSource()
     this.productService.read().subscribe(products => {
       this.products = products
       this.insertDataTable(products)
@@ -35,7 +34,9 @@ export class ProductReadComponent implements AfterViewInit, OnInit {
     this.table.dataSource = this.dataSource;
   }
 
-  insertDataTable(products) {
-    this.dataSource.data = products
+  insertDataTable(products: Product[]) {
+    this.dataSource.data = this.products
+    this.paginator._changePageSize(this.paginator.pageSize)
+    this.table.renderRows()
   }
 }
