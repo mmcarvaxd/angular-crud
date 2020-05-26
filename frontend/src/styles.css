@@ -15,6 +15,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #fdcb6e;
 }
 
+.red {
+  color: #d63031;
+}
+
 body {
     font-family: Roboto, sans-serif;
   }

@@ -1,0 +1,6 @@
+<mat-card>
+    <mat-card-title>Delete Product</mat-card-title>
+    <mat-card-subtitle class="subtitle">Do you realy want to <span class="red">DELETE </span>the product <span class="red">"{{product.name}}"</span></mat-card-subtitle>
+    <button mat-raised-button (click)="deleteProduct()" color="warn">Delete</button>
+    <button mat-raised-button (click)="cancel()" class="cancel-button">Cancel</button>
+</mat-card>
