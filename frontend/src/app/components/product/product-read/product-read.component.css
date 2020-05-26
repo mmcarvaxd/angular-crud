@@ -6,6 +6,10 @@
   margin-right: 10px;
 }
 
+.edit:visited {
+  color: rgb(0, 0, 238);
+}
+
 .delete > i {
   color: #e35e6b;
 }
